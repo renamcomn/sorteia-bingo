@@ -24,6 +24,9 @@ export const BingoProvider: React.FC = ({ children } : any) => {
         if(numbers.length > 0) {
             // random number
             let number = numbers[Math.floor(Math.random() * numbers.length)];
+            const msg = new SpeechSynthesisUtterance();
+            msg.text = number.toString();
+            window.speechSynthesis.speak(msg);
             array.push(number);
 
             // verify and remove sorted number from array

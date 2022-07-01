@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import Button from "./components/Button";
 import Header from "./components/Header";
-import Number from "./components/Number";
 
 import { BingoContext, } from './context/BingoContext';
 
@@ -15,10 +14,6 @@ function App() {
         <Button title="Sortear" onClick={sorterNumber}/>
         <h1>Número sorteado: {sorted}</h1>
       </div>
-      
-      {/* { numbersSorted.map(num => (
-        <Number n={num} key={num} />
-      ))} */}
 
 
 <div className="max-w-2xl mx-auto">
