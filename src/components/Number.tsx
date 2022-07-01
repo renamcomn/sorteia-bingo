@@ -1,10 +1,9 @@
-import { useContext } from "react";
-import { BingoContext } from "../context/BingoContext";
-
-function Number() {
-    const { sorted } = useContext(BingoContext);
+type Props = {
+    n: number;
+}
+function Number({n} : Props) {
     return(
-        <p>{sorted}</p>
+        <p>{n}</p>
     )
 }
 
