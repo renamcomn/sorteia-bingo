@@ -1,19 +1,18 @@
+import { useContext } from "react";
 import Button from "./components/Button";
 import Header from "./components/Header";
+import Number from "./components/Number";
+
+import { BingoContext } from './context/BingoContext';
 
 function App() {
-
-  function sorterNumber() {
-      let number = Math.floor(Math.random() * 75 + 1);
-      console.log(number);
-      return number
-      
-  }
+  const { sorterNumber } = useContext(BingoContext);
 
   return (
     <>
       <Header />
       <Button title="Sortear" onClick={sorterNumber}/>
+      <Number />
     </>
     
   )

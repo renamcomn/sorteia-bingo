@@ -1,6 +1,10 @@
+import { useContext } from "react";
+import { BingoContext } from "../context/BingoContext";
+
 function Number() {
+    const { sorted } = useContext(BingoContext);
     return(
-        <h1>2</h1>
+        <p>{sorted}</p>
     )
 }
 
